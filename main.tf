@@ -3,7 +3,7 @@ data "vcd_nsxt_edgegateway" "orgEdge" {
   name = var.vcd_edge_name
 }
 
-# Создание dnat правила
+# Создание NAT правила
 resource "vcd_nsxt_nat_rule" "nat" {
   edge_gateway_id          = data.vcd_nsxt_edgegateway.orgEdge.id
   name                     = var.name
