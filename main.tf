@@ -1,10 +1,5 @@
-data "vcd_vdc_group" "orgGroup" {
-  name = var.vcd_group_name
-}
-
 data "vcd_nsxt_edgegateway" "orgEdge" {
   name     = var.vcd_edge_name
-  owner_id = data.vcd_vdc_group.orgGroup.id
 }
 
 # Создание NAT правила
